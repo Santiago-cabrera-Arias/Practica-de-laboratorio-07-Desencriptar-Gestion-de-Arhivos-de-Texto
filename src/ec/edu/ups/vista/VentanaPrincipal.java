@@ -167,6 +167,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btnLimpiarActionPerformed
 
+    /**
+     * Boton File Chooser
+     * 
+     * Este boton nos permite abrir y mostrar los archivos.
+     * 
+     * @param evt 
+     */
+    
     private void btnFileChooserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFileChooserActionPerformed
 
         JFileChooser fc = new JFileChooser();
@@ -180,6 +188,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
       
     }//GEN-LAST:event_btnFileChooserActionPerformed
 
+    /**
+     * Boton desencriptar pasamos un texto enciptado y lo mandamos a desencriptar 
+     * y e mostramos en el otro area.
+     * 
+     * @param evt 
+     */
+    
     private void btnDesencriptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDesencriptarActionPerformed
 
         String textoADesencriptar = controladorArchivo.desencriparTexto(txtArea.getText());
@@ -187,6 +202,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btnDesencriptarActionPerformed
 
+    /**
+     * Metodo Limpiar.
+     * 
+     * mandamos a limpiar todos los campos.
+     * 
+     * 
+     */
+    
     public void limpiar() {
 
         txtArea.setText("");
