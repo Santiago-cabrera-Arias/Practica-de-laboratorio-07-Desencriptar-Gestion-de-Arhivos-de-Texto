@@ -108,6 +108,7 @@ public class ControladorArchivo {
      * @param ruta
      * @return
      */
+    
     public String leerTexto(String ruta) {
 
         try {
