@@ -65,5 +65,31 @@ public class ControladorArchivo {
         }
         return texto;
     }
+    
+     /**
+     * Metodo diccionarioAbecedario.
+     *
+     * Aqui hemos creado un arreglo del abecedario donde tenemos el abecedario
+     * orgiginal y el abecedario encriptado el cual esta puesta signos y letras
+     * al azar,ademas ultilizamos el metodo put el cual nos permite actualizar
+     * un registro completo existent,Obiamente tenemos que ocupar el mismo
+     * diccionario que hemos ocupado para encriptar los datos. .
+     *
+     */
+    public void diccionarioAbecedario() {
+
+        String[] abecedario = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
+            "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", " "};
+
+        String[] abecedarioEncriptado = {"~", "!", "@", "#", "$", "5", "6", "%", "^", "&", "*",
+            "8", "|", "]", "`", "c", "a", "r", ">", "<", "?", "/", ".", "_", "-", " L", "+"};
+
+        for (int i = 0; i < 27; i++) {
+
+            //el metodo put se utiliza para actualizar un registro
+            texto.put(abecedario[i], abecedarioEncriptado[i]);
+        }
+
+    }
 
 }
