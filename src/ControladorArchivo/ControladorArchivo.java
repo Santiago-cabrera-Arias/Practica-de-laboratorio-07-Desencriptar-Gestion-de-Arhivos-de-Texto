@@ -5,7 +5,11 @@
  */
 package ControladorArchivo;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -16,7 +20,7 @@ import java.util.Map;
 public class ControladorArchivo {
 
     //Atributos.
-    private File Archivo;
+    private File archivo;
     private String ruta;
 
     //Creamos un map el cual no nos permite crear llaves duplicadas
@@ -32,7 +36,7 @@ public class ControladorArchivo {
     public ControladorArchivo() {
 
         texto = new HashMap<>();
-
+        diccionarioAbecedario();
     }
     
      /**
@@ -91,5 +95,45 @@ public class ControladorArchivo {
         }
 
     }
+    
+    
+     /**
+     * Metodo LeerTexto
+     *
+     * Este metodo es el encargado de pasar el archivo encriptado. Utilizamos el
+     * File Reader el cual se encarga de abrir el fichero de texto y con el
+     * BufferedReader es el que se encarga de leer el archivo.
+     *
+     *
+     * @param ruta
+     * @return
+     */
+    public String leerTexto(String ruta) {
+
+        try {
+            FileReader archivoLectura = new FileReader(ruta);
+            BufferedReader leer = new BufferedReader(archivoLectura);
+            String linea = " ";
+            while (linea != null) {
+                linea = leer.readLine();
+                return linea;
+            }
+            leer.close();
+        } catch (FileNotFoundException e1) {
+
+        } catch (IOException e2) {
+
+        } catch (Exception e3) {
+
+        }
+        return null;
+
+    }
+   
+
+    
+
+    
+    
 
 }
