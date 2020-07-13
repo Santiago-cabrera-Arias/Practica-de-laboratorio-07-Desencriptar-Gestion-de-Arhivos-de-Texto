@@ -5,10 +5,16 @@
  */
 package ControladorArchivo;
 
+import java.io.File;
+
 /**
  *
  * @author santiago Cabrera.
  */
 public class ControladorArchivo {
+ 
+     //Atributos.
+    private File Archivo;
+    private String ruta;
     
 }
