@@ -34,5 +34,36 @@ public class ControladorArchivo {
         texto = new HashMap<>();
 
     }
+    
+     /**
+     * Metodo desencriptarTexto.
+     *
+     * En este metodo desencriptamos el texto que hemos encriptado
+     * anteriormente, debemos llamarle al texto con el JFileChooser .
+     *
+     *
+     * @param mensaje
+     * @return
+     */
+    public String desencriparTexto(String mensaje) {
+
+        String texto = "";
+        for (int i = 0; i < mensaje.length(); i++) {
+            String letra = mensaje.charAt(i) + "";
+            if (!letra.equals("+")) {
+                for (Map.Entry<String, String> entry : this.texto.entrySet()) {
+                    String key = entry.getKey();
+                    String value = entry.getValue();
+                    if (letra.equals(value)) {
+                        texto += key;
+                    }
+                }
+            } else {
+                texto += " ";
+
+            }
+        }
+        return texto;
+    }
 
 }
